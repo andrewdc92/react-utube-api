@@ -1,5 +1,9 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
+
+import SearchBar from './components/search_bar';
+
+const API_KEY = 'AIzaSyCetO-Veu4hILuRuvB64uyFch0BgHdzRvA';
 // import { Provider } from 'react-redux';
 // import { createStore, applyMiddleware } from 'redux';
 //
@@ -15,8 +19,13 @@ import React from 'react';
 //   , document.querySelector('.container'));
 
   // Create a new component that produces HTML and renders it in DOM
-  const App = function() {
-    return <div> Hi !</div>;
-    }
+  const App = () => {
+    return (
+      <div>
+         <SearchBar />
+     </div>
+    );
+  }
 
-    React.render(App);
+
+    ReactDOM.render(<App />, document.querySelector('.container'));
