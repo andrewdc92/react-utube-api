@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
@@ -31,6 +32,7 @@ const API_KEY = 'AIzaSyCetO-Veu4hILuRuvB64uyFch0BgHdzRvA';
     }
 
     render() {
+      const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300);
     return (
     <div>
       <SearchBar onSearchTermChange= {term => this.videoSearch(term)} />
@@ -42,6 +44,7 @@ const API_KEY = 'AIzaSyCetO-Veu4hILuRuvB64uyFch0BgHdzRvA';
     );
    }
   }
+  // videoSearch method gets passed to onSearchTermChange prop
   // passing prop videos and onVideoSelect to video list
 
 
