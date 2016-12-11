@@ -33,6 +33,7 @@ const API_KEY = 'AIzaSyCetO-Veu4hILuRuvB64uyFch0BgHdzRvA';
 
     render() {
       const videoSearch = _.debounce((term) => { this.videoSearch(term) }, 300);
+      // creates a new version of the inner function that will only run every 300 ms
     return (
     <div>
       <SearchBar onSearchTermChange= {term => this.videoSearch(term)} />
